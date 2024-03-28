@@ -1,0 +1,40 @@
+group 'com.practica'
+version '1.0-SNAPSHOT'
+
+defaultTasks 'clean', 'test', 'aggregate'
+
+apply plugin: 'java'
+apply plugin: 'java-library'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+repositories {
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.2.12")
+    }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.1'
+    implementation 'net.serenity-bdd:serenity-core:4.1.0'
+    implementation 'net.serenity-bdd:serenity-junit:4.1.0'
+    implementation 'net.serenity-bdd:serenity-screenplay:4.1.0'
+    implementation 'net.serenity-bdd:serenity-screenplay-webdriver:4.1.0'
+    implementation 'net.serenity-bdd:serenity-assertions:4.1.0'
+    implementation 'net.serenity-bdd:serenity-ensure:4.1.0'
+    implementation 'net.serenity-bdd:serenity-cucumber:4.1.0'
+    implementation group: 'log4j', name: 'log4j', version: '1.2.17'
+    implementation 'io.github.bonigarcia:webdrivermanager:5.6.4'
+}
+
+test {
+    testLogging.showStandardStreams = true
+}
