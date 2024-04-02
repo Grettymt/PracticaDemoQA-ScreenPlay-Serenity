@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Compras en pagina de pruebas" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-28T21:24:49" hostname="GRETTY" time="28.737">
+<testsuite name="Compras en pagina de pruebas" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-02T02:56:08" hostname="GRETTY" time="30.856">
   <properties/>
-  <testcase name="Registro de clientes" classname="Compras en pagina de pruebas" time="28.737"/>
+  <testcase name="Registro de clientes" classname="Compras en pagina de pruebas" time="30.856"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[mar. 28, 2024 4:24:53 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <system-err><![CDATA[abr. 01, 2024 9:56:12 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 ADVERTENCIA: Unable to find an exact match for CDP version 123, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 123
-mar. 28, 2024 4:24:54 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+abr. 01, 2024 9:56:14 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 ADVERTENCIA: Unable to find an exact match for CDP version 123, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 123
 ]]></system-err>
 </testsuite>

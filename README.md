@@ -1,4 +1,4 @@
-# Práctica DemoQA con ScreenPlay
+# Práctica DemoQA con ScreenPlay y Serenity
 
 ### **Requisitos**
 Para este proyecto, se necesitará:

@@ -51,7 +51,9 @@ public class RegistroStepDefinitions extends Configuracion {
                             .conElNombre("Gretty")
                             .conElApellido("Mosquera")
                             .conElCorreo("gretty@gmail.com")
-
+                            .conElTelefono("3293446578")
+                            .conLaMateria("Arts")
+                            .conLaDireccion("Cll90 #10")
             );
         }catch (Exception exception) {
             quitarDriver();
