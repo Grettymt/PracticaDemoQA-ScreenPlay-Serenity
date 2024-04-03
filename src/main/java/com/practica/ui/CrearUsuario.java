@@ -51,6 +51,12 @@ public class CrearUsuario extends PageObject {
     public static final Target CAMPO_DIRECCION = Target.the("Campo direccion")
             .located(By.id("currentAddress"));
 
-    public static final Target BOTON_SUBMIT = Target.the("Boton submit")
+    public static final Target SELECCIONAR_ESTADO = Target.the("Seleccionar estado")
+            .located(By.id("react-select-3-input"));
+
+    public static final Target SELECCIONAR_CIUDAD = Target.the("Seleccionar ciudad")
+            .located(By.id("react-select-4-input"));
+
+    public static final Target BOTON_REGISTRO = Target.the("Boton registro")
             .located(By.id("submit"));
 }

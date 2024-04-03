@@ -14,6 +14,8 @@ public class LlenarFormulario implements Task {
     private String numero_telefono;
     private String materia;
     private String direccion;
+    private String estado;
+    private String ciudad;
 
     public LlenarFormulario conElNombre(String nombre){
         this.nombre=nombre;
@@ -45,6 +47,16 @@ public class LlenarFormulario implements Task {
         return this;
     }
 
+    public LlenarFormulario conElEstado(String estado){
+        this.estado=estado;
+        return this;
+    }
+
+    public LlenarFormulario conLaCiudad(String ciudad){
+        this.ciudad=ciudad;
+        return this;
+    }
+
     @Override
     public <T extends Actor> void performAs(T actor) {
 
@@ -63,7 +75,10 @@ public class LlenarFormulario implements Task {
                 Enter.theValue(materia).into(CAMPO_MATERIA).thenHit(Keys.ENTER),
                 Scroll.to(CHECK_PASATIEMPO),
                 Click.on(CHECK_PASATIEMPO2),
-                Enter.theValue(direccion).into(CAMPO_DIRECCION)
+                Enter.theValue(direccion).into(CAMPO_DIRECCION),
+                Enter.theValue(estado).into(SELECCIONAR_ESTADO).thenHit(Keys.ENTER),
+                Enter.theValue(ciudad).into(SELECCIONAR_CIUDAD).thenHit(Keys.ENTER),
+                Click.on(BOTON_REGISTRO)
         );
     }
     public static LlenarFormulario llenarFormulario(){

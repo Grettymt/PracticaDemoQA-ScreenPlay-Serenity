@@ -8,9 +8,12 @@ import io.cucumber.java.es.Entonces;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Assertions;
 
+import static com.practica.questions.MensajeRegistroUsuario.mensajeRegistroUsuario;
 import static com.practica.tasks.IngresarAFormulario.ingresarAFormulario;
 import static com.practica.tasks.LlenarFormulario.llenarFormulario;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import static org.hamcrest.CoreMatchers.equalTo;
 
 public class RegistroStepDefinitions extends Configuracion {
     public static Logger LOGGER = Logger.getLogger(RegistroStepDefinitions.class);
@@ -54,6 +57,8 @@ public class RegistroStepDefinitions extends Configuracion {
                             .conElTelefono("3293446578")
                             .conLaMateria("Arts")
                             .conLaDireccion("Cll90 #10")
+                            .conElEstado("Haryana")
+                            .conLaCiudad("Karnal")
             );
         }catch (Exception exception) {
             quitarDriver();
@@ -66,7 +71,7 @@ public class RegistroStepDefinitions extends Configuracion {
     public void elUsuarioDebeSerRedireccionadoALaPaginaPrincipal() {
         try{
             theActorInTheSpotlight().should(
-                   // seeThat(mensajeRegistroUsuario(), equalTo("ACCOUNT CREATED!"))
+                   seeThat(mensajeRegistroUsuario(), equalTo("Thanks for submitting the form"))
             );
             quitarDriver();
         }catch (Exception exception) {
